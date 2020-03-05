@@ -6,17 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".Activity.TestFunctionActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAlignment="center"
-        android:text="Activity功能测试"
-        android:textSize="16sp"
-        android:textColor="#333333">
-    </TextView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/function_layout">
 
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/center_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAlignment="center"
+                android:text="Activity功能测试"
+                android:textSize="16sp"
+                android:textColor="#333333">
+            </TextView>
+
+            <Button
+                android:id="@+id/func_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/center_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="打开第一个Fragment"
+                android:layout_marginBottom="20dp">
+            </Button>
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>
