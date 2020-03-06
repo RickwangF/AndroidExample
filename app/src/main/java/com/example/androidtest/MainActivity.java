@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         activityModel.setFunctionName("Activity功能测试");
         activityModel.setClassName(APP_PACKAGE_NAME + ".Activity.TestFunctionActivity");
         list.add(activityModel);
+        FunctionModel designModel = new FunctionModel();
+        designModel.setFunctionName("Material Design测试");
+        designModel.setClassName(APP_PACKAGE_NAME + ".Design.DesignActivity");
+        list.add(designModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");
@@ -60,8 +64,13 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
             Toast.makeText(this,"暂时没有相关功能",Toast.LENGTH_SHORT).show();
             return;
         }
-        Intent intent = new Intent(this, TestFunctionActivity.class);
 
-        startActivity(intent);
+        try {
+            Class classSelf = Class.forName(className);
+            Intent intent = new Intent(this, classSelf);
+            startActivity(intent);
+        } catch (ClassNotFoundException e) {
+            System.out.println("没有找到改类");
+        }
     }
 }
