@@ -17,10 +17,12 @@
             android:background="#223366"
             android:textAlignment="center"
             android:paddingTop="10dp"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+            android:minHeight="10dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
         </TextView>
 <!-- scroll 是要滚动超过标题高度隐藏 enterAlways 是只要往下滑就显示标题 -->
-<!-- enterAlwaysCollapsed 是先滚动AppBar再滚动ScrollView -->
+<!-- enterAlwaysCollapsed 往下滑会显示出AppBar的最小高度 需要配合min-height使用 -->
+<!-- exitUntilCollapsed 不会完全隐藏AppBar -->
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView

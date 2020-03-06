@@ -14,18 +14,27 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DesignAdapter extends RecyclerView.Adapter<DesignAdapter.ViewHolder> {
+public class DesignAdapter extends RecyclerView.Adapter<DesignAdapter.ViewHolder>{
 
     List<String> mList;
 
-    public DesignAdapter(List<String> mList) {
+    DesignListItemClickListener mListener;
+
+    public DesignAdapter(List<String> mList, DesignListItemClickListener mListener) {
         this.mList = mList;
+        this.mListener = mListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.design_function_item, viewGroup, false);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.designItemClicked(i);
+            }
+        });
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
