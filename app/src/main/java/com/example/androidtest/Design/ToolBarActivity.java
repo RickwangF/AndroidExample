@@ -3,8 +3,8 @@ package com.example.androidtest.Design;
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.example.androidtest.R;
 
@@ -19,6 +19,7 @@ public class ToolBarActivity extends AppCompatActivity {
     @BindView(R.id.tool_bar)
     Toolbar toolbar;
 
+
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class ToolBarActivity extends AppCompatActivity {
         textView.setText("012345678911121231242918714978129017823897123977826817234");
         toolbar.setLogo(R.mipmap.ic_weixin);
         toolbar.setTitle("ToolBar");
-        toolbar.setTitleTextColor(R.color.colorAccent);
+        toolbar.setTitleTextColor(R.color.colorWhite);
+        setSupportActionBar(toolbar);
     }
 }
