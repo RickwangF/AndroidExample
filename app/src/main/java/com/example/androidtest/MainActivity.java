@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         designModel.setFunctionName("Material Design测试");
         designModel.setClassName(APP_PACKAGE_NAME + ".Design.DesignActivity");
         list.add(designModel);
+        FunctionModel tabModel = new FunctionModel();
+        tabModel.setFunctionName("TabLayout 测试");
+        tabModel.setClassName(APP_PACKAGE_NAME + ".Tab.TabActivity");
+        list.add(tabModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
             Intent intent = new Intent(this, classSelf);
             startActivity(intent);
         } catch (ClassNotFoundException e) {
-            System.out.println("没有找到改类");
+            System.out.println("没有找到该类");
         }
     }
 }
