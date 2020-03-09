@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         tabModel.setFunctionName("TabLayout 测试");
         tabModel.setClassName(APP_PACKAGE_NAME + ".Tab.TabActivity");
         list.add(tabModel);
+        FunctionModel dialogModel = new FunctionModel();
+        dialogModel.setFunctionName("Dialog 测试");
+        dialogModel.setClassName(APP_PACKAGE_NAME + ".Dialog.DialogListActivity");
+        list.add(dialogModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");

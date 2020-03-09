@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Tab.TabActivity"
+        <activity android:name=".Dialog.DialogListActivity"></activity>
+        <activity
+            android:name=".Tab.TabActivity"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".Design.ToolBarActivity"
             android:launchMode="singleTop"
