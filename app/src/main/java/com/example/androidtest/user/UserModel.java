@@ -1,43 +1,63 @@
 package com.example.androidtest.user;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class UserModel {
 
+    @SerializedName("id")
     private int Id;
 
+    @SerializedName("mid")
     private int Mid;
 
+    @SerializedName("is_main")
     private int IsMain;
 
+    @SerializedName("phone")
     private String Phone;
 
+    @SerializedName("wechat")
     private String Wechat;
 
+    @SerializedName("nick_name")
     private String NickName;
 
+    @SerializedName("name")
     private String Name;
 
+    @SerializedName("avatar")
     private String Avatar;
 
+    @SerializedName("status")
     private int Status;
 
+    @SerializedName("ext_data")
     private String ExtData;
 
+    @SerializedName("create_time")
     private String CreateTime;
 
+    @SerializedName("edit_time")
     private String EditTime;
 
+    @SerializedName("uid")
     private int Uid;
 
+    @SerializedName("roles")
     private List<RoleModel> Roles;
 
+    @SerializedName("easeAcountUser")
     private String EaseAcountUser;
 
+    @SerializedName("easeAcountPass")
     private String EaseAcountPass;
 
+    @SerializedName("push_alias")
     private String PushAlias;
 
+    @SerializedName("accessToken")
     private String AccessToken;
 
     public UserModel() {

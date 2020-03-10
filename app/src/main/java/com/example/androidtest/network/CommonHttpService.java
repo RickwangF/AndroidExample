@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -36,12 +37,20 @@ public class CommonHttpService {
         builder.readTimeout(DEFAULT_READ_TIME_OUT, TimeUnit.SECONDS);//读操作超时时间
         // 公共的请求头拦截器
         builder.addInterceptor(new CommonHeadersInterceptor(context));
+        // 添加log拦截器
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        builder.addInterceptor(loggingInterceptor);
         // 添加公共参数拦截器
-        builder.addInterceptor(new CommonParamsInterceptor(context));
+        // builder.addInterceptor(new CommonParamsInterceptor(context));
         //缓存拦截器
-        builder.addNetworkInterceptor(new CacheControlInterceptor(context));
+        //builder.addNetworkInterceptor(new CacheControlInterceptor(context));
+        // 创建配置过的gson对象
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE);
+        gsonBuilder.serializeNulls();
+        Gson gson = gsonBuilder.create();
 
-        Gson gson = new GsonBuilder().serializeNulls().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
         // 创建Retrofit
         mRetrofit = new Retrofit.Builder()
                 .client(builder.build())

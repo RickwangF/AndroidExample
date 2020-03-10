@@ -2,7 +2,7 @@ package com.example.androidtest.network;
 
 public class NetworkConstant {
     /**接口根地址*/
-    public static final String BASE_URL  = "https://exam.zfgo360.com/";
+    public static final String BASE_URL  = "https://suptest.jaadee.net";
 
     /**SharedPreferences保存key*/
     public static final String SP_USER= "user";

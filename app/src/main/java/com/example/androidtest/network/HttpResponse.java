@@ -1,16 +1,23 @@
 package com.example.androidtest.network;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Rick on 2018/4/9.
  */
 
 public class HttpResponse<T> {
+
+    @SerializedName("code")
     private int Code;
 
+    @SerializedName("message")
     private String Message;
 
+    @SerializedName("data")
     private T Data;
 
+    @SerializedName("cache")
     private String Cache;
 
     public HttpResponse() {

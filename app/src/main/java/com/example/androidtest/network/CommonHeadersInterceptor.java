@@ -35,6 +35,8 @@ public class CommonHeadersInterceptor implements Interceptor {
         builder.addHeader("X-Requested-With", "XMLHttpRequest");
         builder.addHeader("userToken", (String)SharedPreferenceUtil.get(context, NetworkConstant.SP_TOKEN,""));
         builder.addHeader("udid", (String) SharedPreferenceUtil.get(context,NetworkConstant.SP_UDID,""));
+        builder.addHeader("Content-Type", "application/json;charset=utf-8");
+        builder.addHeader("Accept", "application/json");
         return chain.proceed(builder.build());
     }
 }

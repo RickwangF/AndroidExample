@@ -1,25 +1,37 @@
 package com.example.androidtest.user;
 
+import com.google.gson.annotations.SerializedName;
+
 public class RoleModel {
 
+    @SerializedName("id")
     private int Id;
 
+    @SerializedName("business_type_id")
     private int BusinessTypeId;
 
+    @SerializedName("name")
     private String Name;
 
+    @SerializedName("sign")
     private String Sign;
 
+    @SerializedName("remarks")
     private String Remarks;
 
+    @SerializedName("sortby")
     private int SortBy;
 
+    @SerializedName("status")
     private int Status;
 
+    @SerializedName("template")
     private String Template;
 
+    @SerializedName("create_time")
     private String CreateTime;
 
+    @SerializedName("end_time")
     private String EditTime;
 
     public RoleModel() {

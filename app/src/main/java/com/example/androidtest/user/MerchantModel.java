@@ -1,75 +1,112 @@
 package com.example.androidtest.user;
 
+import com.google.gson.annotations.SerializedName;
+
 public class MerchantModel {
 
+    @SerializedName("id")
     private int Id;
 
+    @SerializedName("uid")
     private int Uid;
 
+    @SerializedName("account_uid")
     private int AccountUid;
 
+    @SerializedName("source")
     private String Source;
 
+    @SerializedName("type")
     private int type;
 
+    @SerializedName("account_status")
     private int AccountStatus;
 
+    @SerializedName("accid")
     private String Accid;
 
+    @SerializedName("assistant")
     private int Assistant;
 
+    @SerializedName("bond")
     private int Bond;
 
+    @SerializedName("bond_balance")
     private double BondBalance;
 
+    @SerializedName("category")
     private int Category;
 
+    @SerializedName("real_name")
     private String RealName;
 
+    @SerializedName("company_name")
     private String CompanyName;
 
+    @SerializedName("idcard")
     private String Idcard;
 
+    @SerializedName("mobile")
     private String Mobile;
 
+    @SerializedName("wechat")
     private String Wechat;
 
+    @SerializedName("name")
     private String Name;
 
+    @SerializedName("cover")
     private String Cover;
 
+    @SerializedName("avatar")
     private String Avatar;
 
+    @SerializedName("introduction")
     private String Introduction;
 
+    @SerializedName("remarks")
     private String Remarks;
 
+    @SerializedName("template")
     private int Template;
 
+    @SerializedName("status")
     private int Status;
 
+    @SerializedName("create_time")
     private String CreateTime;
 
+    @SerializedName("edit_time")
     private String EditTime;
 
+    @SerializedName("ext_data")
     private String ExtData;
 
+    @SerializedName("old_merid")
     private int OldMerid;
 
+    @SerializedName("user_upgrade")
     private int UserUpgrade;
 
+    @SerializedName("live_goods")
     private int LiveGoods;
 
+    @SerializedName("live_discern")
     private int LiveDiscern;
 
+    @SerializedName("video")
     private int Video;
 
+    @SerializedName("auction")
     private int Auction;
 
+    @SerializedName("ordinary")
     private int Ordinary;
 
+    @SerializedName("fixed")
     private int Fixed;
 
+    @SerializedName("new_merchant")
     private int NewMerchant;
 
     public MerchantModel() {
