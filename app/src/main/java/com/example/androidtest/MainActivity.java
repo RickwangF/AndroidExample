@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         dialogModel.setFunctionName("Dialog 测试");
         dialogModel.setClassName(APP_PACKAGE_NAME + ".Dialog.DialogListActivity");
         list.add(dialogModel);
+        FunctionModel loginModel = new FunctionModel();
+        loginModel.setFunctionName("登录测试");
+        loginModel.setClassName(APP_PACKAGE_NAME + ".login.LoginActivity");
+        list.add(loginModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");
