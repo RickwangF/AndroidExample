@@ -30,7 +30,8 @@ public class RecyclerDataActivity extends AppCompatActivity {
     void initRecyclerView() {
         List<UserSimpleModel> list = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            UserSimpleModel model = new UserSimpleModel("名字" + i, "");
+            UserSimpleModel model = new UserSimpleModel();
+            model.UserName.set("名字" + i);
             list.add(model);
         }
 
