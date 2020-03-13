@@ -24,7 +24,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".databinding.RecyclerDataActivity"></activity>
+        <activity android:name=".lifecircle.LifeCircleActivity"></activity>
+        <activity android:name=".livedata.LiveDataActivity" />
+        <activity android:name=".databinding.RecyclerDataActivity" />
         <activity android:name=".databinding.DataActivity" />
         <activity android:name=".rx.RxActivity" />
         <activity android:name=".login.LoginActivity" />

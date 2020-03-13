@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         bindingModel.setFunctionName("数据绑定测试");
         bindingModel.setClassName(APP_PACKAGE_NAME + ".databinding.DataActivity");
         list.add(bindingModel);
+        FunctionModel lifeModel = new FunctionModel();
+        lifeModel.setFunctionName("生命周期感知组件");
+        lifeModel.setClassName(APP_PACKAGE_NAME + ".lifecircle.LifeCircleActivity");
+        list.add(lifeModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");
