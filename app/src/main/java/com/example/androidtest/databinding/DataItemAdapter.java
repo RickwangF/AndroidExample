@@ -2,12 +2,14 @@ package com.example.androidtest.databinding;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.databinding.library.baseAdapters.BR;
 import com.example.androidtest.R;
 
 import java.util.List;
@@ -41,7 +43,7 @@ public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHo
 
     static class ViewHolder extends RecyclerView.ViewHolder{
 
-        RecyclerItemBindBinding mBinding;
+        ViewDataBinding mBinding;
 
         static ViewHolder create(LayoutInflater inflater, ViewGroup parent) {
             RecyclerItemBindBinding binding = DataBindingUtil.inflate(inflater, R.layout.recycler_item_bind, parent, false);
@@ -54,7 +56,8 @@ public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHo
         }
 
         void bind(UserSimpleModel userModel) {
-            mBinding.setUser(userModel);
+            mBinding.setVariable(BR.user, userModel);
+            mBinding.executePendingBindings();
         }
     }
 }
