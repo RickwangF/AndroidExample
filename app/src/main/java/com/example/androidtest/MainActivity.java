@@ -61,6 +61,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         loginModel.setFunctionName("登录测试");
         loginModel.setClassName(APP_PACKAGE_NAME + ".login.LoginActivity");
         list.add(loginModel);
+        FunctionModel bindingModel = new FunctionModel();
+        bindingModel.setFunctionName("数据绑定测试");
+        bindingModel.setClassName(APP_PACKAGE_NAME + ".databinding.DataActivity");
+        list.add(bindingModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");

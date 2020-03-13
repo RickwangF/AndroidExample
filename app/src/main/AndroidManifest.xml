@@ -24,7 +24,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".rx.RxActivity"></activity>
+        <activity android:name=".databinding.RecyclerDataActivity"></activity>
+        <activity android:name=".databinding.DataActivity" />
+        <activity android:name=".rx.RxActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".Dialog.DialogListActivity" />
         <activity
