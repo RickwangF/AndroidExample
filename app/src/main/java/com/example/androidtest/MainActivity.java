@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements FunctionItemClick
         lifeModel.setFunctionName("生命周期感知组件");
         lifeModel.setClassName(APP_PACKAGE_NAME + ".lifecircle.LifeCircleActivity");
         list.add(lifeModel);
+        FunctionModel multiTypeModel = new FunctionModel();
+        multiTypeModel.setFunctionName("多布局列表测试");
+        multiTypeModel.setClassName(APP_PACKAGE_NAME + ".multisection.MultiSectionActivity");
+        list.add(multiTypeModel);
         for (int i = 0; i < 20; i++){
             FunctionModel model = new FunctionModel();
             model.setFunctionName("测试");
